@@ -66,14 +66,14 @@ Las Cabeceras pueden ser agrupadas de acuerdo a sus contextos:
 * Cabecera de entidad: Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME.
 
 Request: Autenticacion,cache, indicaciones:
-_Cookies:_ permiten compartir informacion entre peticiones, guardar info para mantener la sesion
-_CORS:_ manejar informacion desde fuera de nuestro servidor, cuando consume informacion desde un lado externo
-_Access-Control-Allow-Origin_ , desde donde puedo consumir
-_ACCEPT:_ Define el contenido que puede aceptar por ejem: codificacion UTF-8 archivos js
-_Autenticacion_ : Para poder pedir cosas al servidor
-_Cache:_ Almacenamiento temporal, gestionar durante cuanto tiempo la respuesta sera la misma, evita menos peticiones pues las almacena
+Cookies: permiten compartir informacion entre peticiones, guardar info para mantener la sesion <br/>
+CORS: manejar informacion desde fuera de nuestro servidor, cuando consume informacion desde un lado externo <br/>
+Access-Control-Allow-Origin, desde donde puedo consumir <br/>
+ACCEPT: Define el contenido que puede aceptar por ejem: codificacion UTF-8 archivos js <br/>
+Autenticacion: Para poder pedir cosas al servidor <br/>
+Cache: Almacenamiento temporal, gestionar durante cuanto tiempo la respuesta sera la misma, evita menos peticiones pues las almacena <br/>
 
-_Estados:_ Numero que indica lo que paso con la peticion:
+* Estados: * Numero que indica lo que paso con la peticion:
 * 200: Ok
 * 201-Crea
 * 300- Redireccion de la peticion, por el recurso
