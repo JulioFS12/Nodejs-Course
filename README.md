@@ -92,6 +92,42 @@ __Estados:__ Numero que indica lo que paso con la peticion:
 
 <img src="https://static.platzi.com/media/user_upload/header-and-status-es-18504c18-62bb-46fa-ab72-8485c53db37c.jpg" />
 
+
+## Cuerpo y query de la petición
+El cuerpo de la petición es la información en sí que queremos enviar, editar o que el servidor nos devuelva. Los datos del usuario que quieres añadir. El servidor envía una respuesta.
+
+### ¿qué tiene y cómo viene? 
+__Depende de las cabeceras:__
+Content-Type nos dirá el tipo de contenido que tiene.
+
+__POSIBLES CONTENT-TYPE:__
+* text/html
+* text/css
+* application/javascript
+* image/jpeg
+* application/json
+* application/xml
+
+En la request. [POST] http://api.com/user <br/>
+Content-type: application/json <br/>
+REQUEST: Es la peticion al servidor <br/>
+Ej. POST: usuario sin id, GET a platzi.com <br/>
+RESPONSE: Cualquier metodo que recibimos del servidor, ejm: content-type: application/json, viene este archivo con el id traido del servidor., trae un html de index.html de platzi <br/>
+
+## QUERY:
+Informacion extra. Orden en el que quiero que vuelvan los parametros. Por ejemplo cuando le pasamos un id
+api.com/person?orderBy=name&age=25
+Para compartir datos con el frontend, nunca debe enviarse info sensible como tokens o tarjetas de creditos visibles en los parametros del query para la url
+Ej. miweb.com?color=red
+
+## ESTRUCTURA:
+Añadir “?” al final de la URL <br/>
+nombre=valor, ejemplo id=3 <br/>
+Separarlos con & si es más de 1 parámetro <br/>
+Content-Length nos dirá que tan largo es el contenido. Los datos en crudo, pueden venir en dos formatos, JSON, o XML. JSON, tiene un formato muy parecido a los objetos en JavaScript, No debemos enviar información sensible en los parámetros del query <br/>
+Estructura de una querey, luego de la url va ? nombre=valor, cada queryy se separa por &. <br/>
+Las queries van a permitirte añadir información extra a los datos que queramos enviarle al servidor. <br/>
+
 ## ¿Qué es Node.js y para que sirve?
 
 La definición formal de **nodejs es:** _un entorno de ejecución para javascript construido con el motor v8._
@@ -195,39 +231,6 @@ Por defecto Node.js detecta tu sistema operativo y descarga el archivo indicado 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
-
-## Cuerpo y query de la petición
-El cuerpo de la petición es la información en sí que queremos enviar, editar o que el servidor nos devuelva. Los datos del usuario que quieres añadir. El servidor envía una respuesta.
-
-### ¿qué tiene y cómo viene? 
-Depende de las cabeceras:
-Content-Type nos dirá el tipo de contenido que tiene.
-
-__POSIBLES CONTENT-TYPE:__
- text/html
- text/css
- application/javascript
- image/jpeg
- application/json
- application/xml
-
-En la request. [POST] http://api.com/user
-Content-type: application/json
-REQUEST: Es la peticion al servidor
-Ej. POST: usuario sin id, GET a platzi.com
-RESPONSE: Cualquier metodo que recibimos del servidor, ejm: content-type: application/json, viene este archivo con el id traido del servidor., trae un html de index.html de platzi
-QUERY:
-Informacion extra. Orden en el que quiero que vuelvan los parametros. Por ejemplo cuando le pasamos un id
-api.com/person?orderBy=name&age=25
-Para compartir datos con el frontend, nunca debe enviarse info sensible como tokens o tarjetas de creditos visibles en los parametros del query para la url
-Ej. miweb.com?color=red
-ESTRUCTURA:
-Añadir “?” al final de la URL
-nombre=valor, ejemplo id=3
-Separarlos con & si es más de 1 parámetro
-Content-Length nos dirá que tan largo es el contenido. Los datos en crudo, pueden venir en dos formatos, JSON, o XML. JSON, tiene un formato muy parecido a los objetos en JavaScript, No debemos enviar información sensible en los parámetros del query
-Estructura de una querey, luego de la url va ? nombre=valor, cada queryy se separa por &.
-Las queries van a permitirte añadir información extra a los datos que queramos enviarle al servidor.
 
 ## Arquitectura orientada a eventos
 
