@@ -52,7 +52,11 @@ Métodos: Qué quieres hacer
 Estado: Cómo ha ido la operación
 Cuerpo: Lo que el servidor devuelve
 
+### Netodos, cabeceras y estados
+
 <img src="https://static.platzi.com/media/user_upload/methods-es-dcb0fc7c-4d32-4e34-b06f-2398d2677a68.jpg" />
+
+<img src="https://static.platzi.com/media/user_upload/header-and-status-es-18504c18-62bb-46fa-ab72-8485c53db37c.jpg" />
 
 ## ¿Qué es Node.js y para que sirve?
 
