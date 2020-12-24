@@ -8,48 +8,6 @@
    alt="nodejs-logo">
 </div>
 
-
-
-## Instalar nodejs linux
-```
-$ sudo apt-get install curl
-```
-### Para la version LTS
-
-```
-$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-```
-
-### Para la version Current
-
-```
-$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-```
-
-### Instalacion NodeJs
-
-```
-$ sudo apt-get install nodejs
-```
-
-### Comprobacion de la instalacion
-
-```Node
-$ node -v
-```
-Output:
-```
-v12.18.0
-```
-```NPM
-$ npm -v
-```
-Output:
-```
-v6.14.4
-```
-La version del output puede variar dependiendo de la version que instalaste en pasos anteriores
-
 ## ¿Qué son y cómo se usan las peticiones HTTP?
 
 Una petición HTTP es un protocolo de comunicación que permite las transferencias de información en la web.
@@ -129,7 +87,45 @@ Por otro lado **en Nodejs** tenemos una serie de modulos:
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-## Instalación de Node.js
+## Instalación de Node.js linux y windows
+```
+$ sudo apt-get install curl
+```
+### Para la version LTS
+
+```
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+```
+
+### Para la version Current
+
+```
+$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+```
+
+### Instalacion NodeJs
+
+```
+$ sudo apt-get install nodejs
+```
+
+### Comprobacion de la instalacion
+
+```Node
+$ node -v
+```
+Output:
+```
+v12.18.0
+```
+```NPM
+$ npm -v
+```
+Output:
+```
+v6.14.4
+```
+La version del output puede variar dependiendo de la version que instalaste en pasos anteriores
 
 Para instalar Node.js tienes que dirigirte a [nodejs.org](https://nodejs.org/es/) y elegir entre la ultima versión o la version LTS.
 
