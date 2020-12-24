@@ -52,6 +52,8 @@ Métodos: Qué quieres hacer
 Estado: Cómo ha ido la operación
 Cuerpo: Lo que el servidor devuelve
 
+<img src="https://static.platzi.com/media/user_upload/methods-es-dcb0fc7c-4d32-4e34-b06f-2398d2677a68.jpg" />
+
 ## ¿Qué es Node.js y para que sirve?
 
 La definición formal de **nodejs es:** _un entorno de ejecución para javascript construido con el motor v8._
