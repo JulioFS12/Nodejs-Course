@@ -8,74 +8,31 @@
    alt="nodejs-logo">
 </div>
 
-## Tabla de contenido
-- [¿Qué es Node.js y para que sirve?](#qué-es-nodejs-y-para-que-sirve)
-- [Fechas importantes de NodeJS](#fechas-importantes-de-nodejs)
-- [Diferencias entre NodeJs y Javascript](#diferencias-entre-nodejs-y-javascript)
-- [Instalación de Node.js](#instalación-de-nodejs)
-- [Arquitectura orientada a eventos](#arquitectura-orientada-a-eventos)
-- [Event Emiter](#event-emiter)
-- [Primer Servidor HTTP](#primer-servidor-http)
-- [Sreams](#sreams)
-- [Readable y Writable Streams](#readable-y-writable-streams)
-- [Duplex y Transforms streams](#duplex-y-transforms-streams)
-- [Uso de utilidades que tiene NodeJS](#uso-de-utilidades-que-tiene-nodejs)
-  - [Utilidades del sistema operativo](#utilidades-del-sistema-operativo)
-  - [Utilidades con el sistema de archivos](#utilidades-con-el-sistema-de-archivos)
-- [Administrar directorios y archivos](#administrar-directorios-y-archivos)
-- [Consola, utilidades y debuggin](#consola-utilidades-y-debuggin)
-- [Deprecate](#deprecate)
-- [Debuggin en node](#debuggin-en-node)
-- [Clusters y procesos hijos](#clusters-y-procesos-hijos)
-- [Request y Response Objects](#request-y-response-objects)
-  - [Request body](#request-body)
-  - [Request params](#request-params)
-  - [Request query](#request-query)
-  - [Response object](#response-object)
-- [Exploremos los métodos más comunes](#exploremos-los-métodos-más-comunes)
-  - [Response end()](#response-end)
-  - [Response json()](#response-json)
-  - [Response send()](#response-send)
-- [¿Qué es express y para que sirve?](#qué-es-express-y-para-que-sirve)
-  - [Crea tu primer servidor en express](#crea-tu-primer-servidor-en-express)
-- [Anatomía de una API Restful](#anatomía-de-una-api-restful)
-- [Estructura de una película con Mockaroo](#estructura-de-una-película-con-mockaroo)
-- [Implementando un CRUD en express.js](#implementando-un-crud-en-expressjs)
-  - [Métodos idempotentes del CRUD](#métodos-idempotentes-del-crud)
-- [Implementando una capa de servicios en express](#implementando-una-capa-de-servicios-en-express)
-- [Creación de una BD en MongoAtlas](#creación-de-una-bd-en-mongoatlas)
-  - [Conexión a MongoAtlas una instancia de MongoDB](#conexión-a-mongoatlas-una-instancia-de-mongodb)
-  - [Implementación de las acciones de MongoDB](#implementación-de-las-acciones-de-mongodb)
-  - [Conexión de nuestros servicios con MongoDB](#conexión-de-nuestros-servicios-con-mongodb)
-- [¿Qué es un middleware?](#qué-es-un-middleware)
-- [Manejador de erroes asíncronos y síncronos en Express](#manejador-de-erroes-asíncronos-y-síncronos-en-express)
-- [Capa de validación de datos a travéz de un middleware](#capa-de-validación-de-datos-a-travéz-de-un-middleware)
-- [¿Qué es Join y Boom?](#qué-es-join-y-boom)
-  - [Implementando Boom](#implementando-boom)
-  - [Implementando Joi](#implementando-joi)
-- [Middlewares populares en Express.js](#middlewares-populares-en-expressjs)
-- [Debugging e inspect](#debugging-e-inspect)
-  - [Haciendo debugging](#haciendo-debugging)
-- [Ejecutando el modo inspect en desarrollo](#ejecutando-el-modo-inspect-en-desarrollo)
-- [Tests](#tests)
-  - [Creación de test para nuestros endpoints](#creación-de-test-para-nuestros-endpoints)
-  - [Creación de Test para nuestros servicios](#creación-de-test-para-nuestros-servicios)
-  - [Creación de Test para nuestras utilidades](#creación-de-test-para-nuestras-utilidades)
-  - [Agregando un comando coverage](#agregando-un-comando-coverage)
-- [Considerenado las mejores prácticas para el despliegue](#considerenado-las-mejores-prácticas-para-el-despliegue)
-- [Variables de entorno, CORS y HTTPS](#variables-de-entorno-cors-y-https)
-  - [Como usar las variables de entorno para diferentes ambientes](#como-usar-las-variables-de-entorno-para-diferentes-ambientes)
-  - [¿Cuando no es posible acceder al servidor remoto?](#cuando-no-es-posible-acceder-al-servidor-remoto)
-  - [Variables de entorno de forma nativa](#variables-de-entorno-de-forma-nativa)
-  - [Habilitando CORS en producción](#habilitando-cors-en-producción)
-  - [Habilitar CORS para todos los request (No recomendado en producción)](#habilitar-cors-para-todos-los-request-no-recomendado-en-producción)
-  - [Habilitar CORS para los request específicos de un cliente (Recomendado para producción)](#habilitar-cors-para-los-request-específicos-de-un-cliente-recomendado-para-producción)
-- [Cómo funciona y por qué es importante el uso de HTTPS](#cómo-funciona-y-por-qué-es-importante-el-uso-de-https)
-  - [Por qué usar HTTPS](#por-qué-usar-https)
-  - [Cómo habilitar HTTPS en nuestro servidor](#cómo-habilitar-https-en-nuestro-servidor)
-- [Como implementar una capa de manejo de caché en express](#como-implementar-una-capa-de-manejo-de-caché-en-express)
-- [¿Cómo contener tu aplicación en Docker?](#cómo-contener-tu-aplicación-en-docker)
-- [Despliegue en now](#despliegue-en-now)
+## Instalar nodejs linux
+
+$ sudo apt-get install curl
+
+<h3>Para la version LTS</h3>
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+<h3>Para la version Current</h3>
+$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
+<h3>Instalacion NodeJs</h3>
+$ sudo apt-get install nodejs
+
+<h3>Comprobacion de la instalacion</h3>
+Node
+$ node -v
+Output:
+
+v12.18.0
+NPM
+$ npm -v
+Output:
+
+v6.14.4
+La version del output puede variar dependiendo de la version que instalaste en pasos anteriores
 
 ## ¿Qué es Node.js y para que sirve?
 
