@@ -15,17 +15,17 @@ Es el lenguaje común para todas las comunicaciones.
 
 ### ¿Cómo es una petición? 
 
-GET /index.html HTTP/1.1 
-Host: www.example.com
-Referer: www.google.com
-User-Agent: Mozilla/5.0
-Connection: keep-alive
+* GET /index.html HTTP/1.1 
+* Host: www.example.com
+* Referer: www.google.com
+* User-Agent: Mozilla/5.0
+* Connection: keep-alive
 
 ### Puntos claves a tener en cuenta
 
-Métodos: Qué quieres hacer
-Estado: Cómo ha ido la operación
-Cuerpo: Lo que el servidor devuelve
+* Métodos: Qué quieres hacer
+* Estado: Cómo ha ido la operación
+* Cuerpo: Lo que el servidor devuelve
 
 ### Netodos, cabeceras y estados
 
