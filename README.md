@@ -65,6 +65,21 @@ Las Cabeceras pueden ser agrupadas de acuerdo a sus contextos:
 * Cabecera de respuesta: Cabeceras que contienen más información sobre el contenido, como su origen o el servidor (nombre, versión, etc.).
 * Cabecera de entidad: Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME.
 
+Request: Autenticacion,cache, indicaciones:
+_Cookies:_ permiten compartir informacion entre peticiones, guardar info para mantener la sesion
+_CORS:_ manejar informacion desde fuera de nuestro servidor, cuando consume informacion desde un lado externo
+_Access-Control-Allow-Origin_ , desde donde puedo consumir
+_ACCEPT:_ Define el contenido que puede aceptar por ejem: codificacion UTF-8 archivos js
+_Autenticacion_ : Para poder pedir cosas al servidor
+_Cache:_ Almacenamiento temporal, gestionar durante cuanto tiempo la respuesta sera la misma, evita menos peticiones pues las almacena
+
+_Estados:_ Numero que indica lo que paso con la peticion:
+* 200: Ok
+* 201-Crea
+* 300- Redireccion de la peticion, por el recurso
+* 400-40x Errores del cliente
+* 500- Error interno del servidor
+
 <img src="https://static.platzi.com/media/user_upload/methods-es-dcb0fc7c-4d32-4e34-b06f-2398d2677a68.jpg" />
 
 <img src="https://static.platzi.com/media/user_upload/header-and-status-es-18504c18-62bb-46fa-ab72-8485c53db37c.jpg" />
