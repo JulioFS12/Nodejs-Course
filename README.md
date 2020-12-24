@@ -37,8 +37,8 @@ La version del output puede variar dependiendo de la version que instalaste en p
 <h3>¿Qué son y cómo se usan las peticiones HTTP?</h3>
 Una petición HTTP es un protocolo de comunicación que permite las transferencias de información en la web.
 Es el lenguaje común para todas las comunicaciones.
-
-## ¿Cómo es una petición?
+<h3></h3>
+<h3>¿Cómo es una petición?</h3> 
 
 GET /index.html HTTP/1.1
 Host: www.example.com
