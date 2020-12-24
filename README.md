@@ -232,6 +232,8 @@ Content-Length nos dirá que tan largo es el contenido. Los datos en crudo, pued
 Estructura de una querey, luego de la url va ? nombre=valor, cada queryy se separa por &. <br/>
 Las queries van a permitirte añadir información extra a los datos que queramos enviarle al servidor. <br/>
 
+
+
 ## Arquitectura orientada a eventos
 
 Uno de los paradigmas de programación en nodejs más populares es la arquitectura orientada a eventos, los eventos nos permiten manipular el código asincrono de una mejor manera. Respasemos algunos ejemplos de callback
@@ -1228,6 +1230,27 @@ app.get('/json', (req, res) => {
 app.listen(config.port, function () {
   console.log(`Listening http://localhost:${config.port}`);
 })
+```
+
+```
+// Lo primero que hacemos para tener un server en NodeJS es cargar una //librería para  montarlo. Express es una muy buena.
+//--> npm i express
+
+const express =require ('express')  // La forma que tiene de traer módulos.
+
+var app = express();
+// Para ver que funciona le  pido que me devuelva para cualquier ruta:
+app.use('/', function(req,res){ // --->Para cualquier ruta, cre una función, tiene dos parámentros, cualquier funcion http tiene req y res.
+        res.send("Estoy aprendiendo!!!"); // Estaes la respuesta que tengo.
+});
+
+//Para que lo anterior viva temos que decirle donde va a escuchar, eligimos un puerto, como el 3000 quees muy usado en las apps de Node.
+
+app.listen(3000);
+console.log('Estoy escuchando por http://localhost:3000 que es el puerto por el que escucho.');
+
+//Con esto está listo el servidor de Node para que viva:
+//---> node server
 ```
 
 **Challenge**: Crear un servidor que detecte si el año es bisiesto:
