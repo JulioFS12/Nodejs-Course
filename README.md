@@ -112,8 +112,6 @@ Por defecto Node.js detecta tu sistema operativo y descarga el archivo indicado 
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-#  Conocer y comprender cómo se realizan las conexiones hacia los servidores a través de internet y sus implicaciones en el desarrollo de servidores.
-
 ## ¿Qué son y cómo se usan las peticiones HTTP?
 
 Una petición HTTP es un protocolo de comunicación que permite las transferencias de información en la web.
