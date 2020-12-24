@@ -8,6 +8,14 @@
    alt="nodejs-logo">
 </div>
 
+## Collaboration
+***
+Give instructions on how to collaborate with your project.
+> Maybe you want to write a quote in this part. 
+> It should go over several rows?
+> This is how you do it.
+
+
 ## Instalar nodejs linux
 
 $ sudo apt-get install curl
@@ -40,7 +48,7 @@ Es el lenguaje común para todas las comunicaciones.
 <h3></h3>
 <h3>¿Cómo es una petición?</h3> 
 
-GET /index.html HTTP/1.1
+GET /index.html HTTP/1.1 
 Host: www.example.com
 Referer: www.google.com
 User-Agent: Mozilla/5.0
