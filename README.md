@@ -1231,18 +1231,38 @@ app.listen(config.port, function () {
   console.log(`Listening http://localhost:${config.port}`);
 })
 ```
+### Server mode 2
 
-```
+```js
 // Lo primero que hacemos para tener un server en NodeJS es cargar una //librería para  montarlo. Express es una muy buena.
 //--> npm i express
 
 const express =require ('express')  // La forma que tiene de traer módulos.
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({extended : false}));
 
-var app = express();
-// Para ver que funciona le  pido que me devuelva para cualquier ruta:
-app.use('/', function(req,res){ // --->Para cualquier ruta, cre una función, tiene dos parámentros, cualquier funcion http tiene req y res.
-        res.send("Estoy aprendiendo!!!"); // Estaes la respuesta que tengo.
+/*
+app.use('/', function(req, resp){
+    resp.send("hola");
 });
+*/
+
+router.get("/", function(req, res){
+    res.send("peticion de get");
+  });
+
+router.post("/", function(req, res){
+    res.send("peticion de post");
+  });
+
+router.patch("/",function(req, res){
+    res.send("peticion de patch");
+  });
+
+router.delete("/",function(req, res){
+    res.send("peticion de delete");
+  });
 
 //Para que lo anterior viva temos que decirle donde va a escuchar, eligimos un puerto, como el 3000 quees muy usado en las apps de Node.
 
@@ -1251,6 +1271,18 @@ console.log('Estoy escuchando por http://localhost:3000 que es el puerto por el 
 
 //Con esto está listo el servidor de Node para que viva:
 //---> node server
+```
+<img src="https://i.ibb.co/f4Rk6BX/middleware.png"/>
+
+### Body - Parser
+Actualmente ya bodyparser viene en express, solo
+podríamos utilizarlo de la siguiente manera…
+
+```js
+const express = require('express');
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({extended : false}));
 ```
 
 **Challenge**: Crear un servidor que detecte si el año es bisiesto:
