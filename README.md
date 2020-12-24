@@ -60,10 +60,10 @@ Se pueden agregar cabeceras propietarias personalizadas usando el prefijo 'X-', 
 
 Las Cabeceras pueden ser agrupadas de acuerdo a sus contextos:
 
-__Cabecera general:__ Cabeceras que se aplican tanto a las peticiones como a las respuestas, pero sin relación con los datos que finalmente se transmiten en el cuerpo.
-__Cabecera de consulta:__ Cabeceras que contienen más información sobre el contenido que va a obtenerse o sobre el cliente.
-__Cabecera de respuesta:__ Cabeceras que contienen más información sobre el contenido, como su origen o el servidor (nombre, versión, etc.).
-__Cabecera de entidad:__ Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME.
+__Cabecera general:__ Cabeceras que se aplican tanto a las peticiones como a las respuestas, pero sin relación con los datos que finalmente se transmiten en el cuerpo. <br/>
+__Cabecera de consulta:__ Cabeceras que contienen más información sobre el contenido que va a obtenerse o sobre el cliente. <br/>
+__Cabecera de respuesta:__ Cabeceras que contienen más información sobre el contenido, como su origen o el servidor (nombre, versión, etc.). <br/>
+__Cabecera de entidad:__ Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME. <br/>
 
 __Request:__ Autenticacion,cache, indicaciones: <br/>
 __Cookies:__ permiten compartir informacion entre peticiones, guardar info para mantener la sesion <br/>
@@ -72,6 +72,14 @@ __Access-Control-Allow-Origin__, desde donde puedo consumir <br/>
 __ACCEPT:__ Define el contenido que puede aceptar por ejem: codificacion UTF-8 archivos js <br/>
 __Autenticacion:__ Para poder pedir cosas al servidor <br/>
 __Cache:__ Almacenamiento temporal, gestionar durante cuanto tiempo la respuesta sera la misma, evita menos peticiones pues las almacena <br/>
+
+
+### Cabeceras de paso
+__COKIES <br/>
+CORS <br/>
+ACCEPT v
+AUTHORIZATION <br/>
+CACHE <br/>__
 
 * Estados: * Numero que indica lo que paso con la peticion:
 * 200: Ok
