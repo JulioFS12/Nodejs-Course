@@ -81,7 +81,7 @@ ACCEPT v
 AUTHORIZATION <br/>
 CACHE <br/>__
 
-* Estados: * Numero que indica lo que paso con la peticion:
+__Estados:__ Numero que indica lo que paso con la peticion:
 * 200: Ok
 * 201-Crea
 * 300- Redireccion de la peticion, por el recurso
@@ -186,6 +186,8 @@ v6.14.4
 ```
 La version del output puede variar dependiendo de la version que instalaste en pasos anteriores
 
+### Windows
+
 Para instalar Node.js tienes que dirigirte a [nodejs.org](https://nodejs.org/es/) y elegir entre la ultima versión o la version LTS.
 
 Por defecto Node.js detecta tu sistema operativo y descarga el archivo indicado para la instalación, si no es tu caso puedes dirigirte al enlace de otras [descargas](https://nodejs.org/es/download/.)
@@ -193,6 +195,39 @@ Por defecto Node.js detecta tu sistema operativo y descarga el archivo indicado 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
+
+## Cuerpo y query de la petición
+El cuerpo de la petición es la información en sí que queremos enviar, editar o que el servidor nos devuelva. Los datos del usuario que quieres añadir. El servidor envía una respuesta.
+
+### ¿qué tiene y cómo viene? 
+Depende de las cabeceras:
+Content-Type nos dirá el tipo de contenido que tiene.
+
+__POSIBLES CONTENT-TYPE:__
+ text/html
+ text/css
+ application/javascript
+ image/jpeg
+ application/json
+ application/xml
+
+En la request. [POST] http://api.com/user
+Content-type: application/json
+REQUEST: Es la peticion al servidor
+Ej. POST: usuario sin id, GET a platzi.com
+RESPONSE: Cualquier metodo que recibimos del servidor, ejm: content-type: application/json, viene este archivo con el id traido del servidor., trae un html de index.html de platzi
+QUERY:
+Informacion extra. Orden en el que quiero que vuelvan los parametros. Por ejemplo cuando le pasamos un id
+api.com/person?orderBy=name&age=25
+Para compartir datos con el frontend, nunca debe enviarse info sensible como tokens o tarjetas de creditos visibles en los parametros del query para la url
+Ej. miweb.com?color=red
+ESTRUCTURA:
+Añadir “?” al final de la URL
+nombre=valor, ejemplo id=3
+Separarlos con & si es más de 1 parámetro
+Content-Length nos dirá que tan largo es el contenido. Los datos en crudo, pueden venir en dos formatos, JSON, o XML. JSON, tiene un formato muy parecido a los objetos en JavaScript, No debemos enviar información sensible en los parámetros del query
+Estructura de una querey, luego de la url va ? nombre=valor, cada queryy se separa por &.
+Las queries van a permitirte añadir información extra a los datos que queramos enviarle al servidor.
 
 ## Arquitectura orientada a eventos
 
