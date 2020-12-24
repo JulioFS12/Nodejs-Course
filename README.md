@@ -34,11 +34,11 @@ Output:
 v6.14.4
 La version del output puede variar dependiendo de la version que instalaste en pasos anteriores
 
-##¿Qué son y cómo se usan las peticiones HTTP?
+<h3>¿Qué son y cómo se usan las peticiones HTTP?</h3>
 Una petición HTTP es un protocolo de comunicación que permite las transferencias de información en la web.
 Es el lenguaje común para todas las comunicaciones.
 
-##¿Cómo es una petición?
+## ¿Cómo es una petición?
 
 GET /index.html HTTP/1.1
 Host: www.example.com
@@ -46,7 +46,7 @@ Referer: www.google.com
 User-Agent: Mozilla/5.0
 Connection: keep-alive
 
-##Puntos claves a tener en cuenta:
+<h3>Puntos claves a tener en cuenta </h3>
 
 Métodos: Qué quieres hacer
 Estado: Cómo ha ido la operación
