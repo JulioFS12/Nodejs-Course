@@ -52,6 +52,19 @@ El método TRACE  realiza una prueba de bucle de retorno de mensaje a lo largo d
 ### PATCH
 El método PATCH  es utilizado para aplicar modificaciones parciales a un recurso.
 
+### Cabecera
+<a href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers" target="_blank"></a>
+
+Las cabeceras (en inglés headers) HTTP permiten al cliente y al servidor enviar información adicional junto a una petición o respuesta. Una cabecera de petición esta compuesta por su nombre (no sensible a las mayusculas) seguido de dos puntos ':', y a continuación su valor (sin saltos de línea). Los espacios en blanco a la izquierda del valor son ignorados
+Se pueden agregar cabeceras propietarias personalizadas usando el prefijo 'X-', pero esta convención se encuentra desfasada desde Julio de 2012, debido a los inconvenientes causados cuando se estandarizaron campos no estandar en el RFC 6648; otras están listadas en un registro IANA, cuyo contenido original fue definido en el RFC 4229, IANA tambien mantiene un registro de propuestas para nuevas cabeceras HTTP
+
+Las Cabeceras pueden ser agrupadas de acuerdo a sus contextos:
+
+* Cabecera general: Cabeceras que se aplican tanto a las peticiones como a las respuestas, pero sin relación con los datos que finalmente se transmiten en el cuerpo.
+* Cabecera de consulta: Cabeceras que contienen más información sobre el contenido que va a obtenerse o sobre el cliente.
+* Cabecera de respuesta: Cabeceras que contienen más información sobre el contenido, como su origen o el servidor (nombre, versión, etc.).
+* Cabecera de entidad: Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME.
+
 <img src="https://static.platzi.com/media/user_upload/methods-es-dcb0fc7c-4d32-4e34-b06f-2398d2677a68.jpg" />
 
 <img src="https://static.platzi.com/media/user_upload/header-and-status-es-18504c18-62bb-46fa-ab72-8485c53db37c.jpg" />
