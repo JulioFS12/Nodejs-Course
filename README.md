@@ -60,12 +60,12 @@ Se pueden agregar cabeceras propietarias personalizadas usando el prefijo 'X-', 
 
 Las Cabeceras pueden ser agrupadas de acuerdo a sus contextos:
 
-* Cabecera general: Cabeceras que se aplican tanto a las peticiones como a las respuestas, pero sin relación con los datos que finalmente se transmiten en el cuerpo.
-* Cabecera de consulta: Cabeceras que contienen más información sobre el contenido que va a obtenerse o sobre el cliente.
-* Cabecera de respuesta: Cabeceras que contienen más información sobre el contenido, como su origen o el servidor (nombre, versión, etc.).
-* Cabecera de entidad: Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME.
+__Cabecera general:__ Cabeceras que se aplican tanto a las peticiones como a las respuestas, pero sin relación con los datos que finalmente se transmiten en el cuerpo.
+__Cabecera de consulta:__ Cabeceras que contienen más información sobre el contenido que va a obtenerse o sobre el cliente.
+__Cabecera de respuesta:__ Cabeceras que contienen más información sobre el contenido, como su origen o el servidor (nombre, versión, etc.).
+__Cabecera de entidad:__ Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME.
 
-__Request:__ Autenticacion,cache, indicaciones:
+__Request:__ Autenticacion,cache, indicaciones: <br/>
 __Cookies:__ permiten compartir informacion entre peticiones, guardar info para mantener la sesion <br/>
 __CORS:__ manejar informacion desde fuera de nuestro servidor, cuando consume informacion desde un lado externo <br/>
 __Access-Control-Allow-Origin__, desde donde puedo consumir <br/>
