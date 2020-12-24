@@ -53,7 +53,7 @@ El método TRACE  realiza una prueba de bucle de retorno de mensaje a lo largo d
 El método PATCH  es utilizado para aplicar modificaciones parciales a un recurso.
 
 ### Cabecera
-<a href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers" target="_blank"></a>
+<a href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers" target="_blank">MDN HEADERS</a>
 
 Las cabeceras (en inglés headers) HTTP permiten al cliente y al servidor enviar información adicional junto a una petición o respuesta. Una cabecera de petición esta compuesta por su nombre (no sensible a las mayusculas) seguido de dos puntos ':', y a continuación su valor (sin saltos de línea). Los espacios en blanco a la izquierda del valor son ignorados
 Se pueden agregar cabeceras propietarias personalizadas usando el prefijo 'X-', pero esta convención se encuentra desfasada desde Julio de 2012, debido a los inconvenientes causados cuando se estandarizaron campos no estandar en el RFC 6648; otras están listadas en un registro IANA, cuyo contenido original fue definido en el RFC 4229, IANA tambien mantiene un registro de propuestas para nuevas cabeceras HTTP
@@ -65,13 +65,13 @@ Las Cabeceras pueden ser agrupadas de acuerdo a sus contextos:
 * Cabecera de respuesta: Cabeceras que contienen más información sobre el contenido, como su origen o el servidor (nombre, versión, etc.).
 * Cabecera de entidad: Cabeceras que contienen más información sobre el cuerpo de la entidad, como el tamaño del contenido o su tipo MIME.
 
-Request: Autenticacion,cache, indicaciones:
-Cookies: permiten compartir informacion entre peticiones, guardar info para mantener la sesion <br/>
-CORS: manejar informacion desde fuera de nuestro servidor, cuando consume informacion desde un lado externo <br/>
-Access-Control-Allow-Origin, desde donde puedo consumir <br/>
-ACCEPT: Define el contenido que puede aceptar por ejem: codificacion UTF-8 archivos js <br/>
-Autenticacion: Para poder pedir cosas al servidor <br/>
-Cache: Almacenamiento temporal, gestionar durante cuanto tiempo la respuesta sera la misma, evita menos peticiones pues las almacena <br/>
+__Request:__ Autenticacion,cache, indicaciones:
+__Cookies:__ permiten compartir informacion entre peticiones, guardar info para mantener la sesion <br/>
+__CORS:__ manejar informacion desde fuera de nuestro servidor, cuando consume informacion desde un lado externo <br/>
+__Access-Control-Allow-Origin__, desde donde puedo consumir <br/>
+__ACCEPT:__ Define el contenido que puede aceptar por ejem: codificacion UTF-8 archivos js <br/>
+__Autenticacion:__ Para poder pedir cosas al servidor <br/>
+__Cache:__ Almacenamiento temporal, gestionar durante cuanto tiempo la respuesta sera la misma, evita menos peticiones pues las almacena <br/>
 
 * Estados: * Numero que indica lo que paso con la peticion:
 * 200: Ok
