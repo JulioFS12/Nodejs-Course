@@ -14,19 +14,26 @@
 ```
 $ sudo apt-get install curl
 ```
-<h3>Para la version LTS</h3>
+## Para la version LTS
+
 ```
 $ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
-<h3>Para la version Current</h3>
+
+## Para la version Current
+
 ```
 $ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 ```
-<h3>Instalacion NodeJs</h3>
+
+## Instalacion NodeJs
+
 ```
 $ sudo apt-get install nodejs
 ```
-<h3>Comprobacion de la instalacion</h3>
+
+## Comprobacion de la instalacion<
+
 ```Node
 $ node -v
 ```
