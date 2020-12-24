@@ -46,7 +46,7 @@ Referer: www.google.com
 User-Agent: Mozilla/5.0
 Connection: keep-alive
 
-<h3>Puntos claves a tener en cuenta </h3>
+<h3> Puntos claves a tener en cuenta </h3>
 
 Métodos: Qué quieres hacer
 Estado: Cómo ha ido la operación
