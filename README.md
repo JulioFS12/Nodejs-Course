@@ -8,6 +8,112 @@
    alt="nodejs-logo">
 </div>
 
+### ¿Qué es Node.js y para que sirve?
+
+La definición formal de **nodejs es:** _un entorno de ejecución para javascript construido con el motor v8._
+
+**El entorno de ejecucíon:** es la capa que corre por el sistema operativo que ejecuta software, básicamente se encarga de como se consume memoria, como acceder a las variables y como corre el [garbage collector](https://es.wikipedia.org/wiki/Recolector_de_basura).
+
+[Chrome V8](https://es.wikipedia.org/wiki/Chrome_V8) Es un engine de Javascript por de **chromiund-project** para chrome y chromium. Además de chrome existen **2 proyectos** que son **chromium** que es la versión open source y luego **chrome canary**, chrome canary se llamá así por una analogía donde antiguamente los mineros iban a la mina y para detectar si habia gases o algún peligro, ponían a un canario en una pequeña jaula, si había un gas y pasaba algo, el canario lasimosamente moría y es la manera en como se daban cuenta si había algún error, lo mismo pasa con chrome canary, es la manera como detectan errores y si todo sale bien, lo pasan a chrome.
+
+[Chrome V8](https://es.wikipedia.org/wiki/Chrome_V8) lo que hace es compilar javascript a código máquina. Recordemos que los lenguajes interpretados se ejecutan muy rápido, pero cuando hay un loop de código muy seguido se demoran, porque cada vez que pasan por esa linea de código tienen que volverla a interpretar a diferencia de los lenguajes compilados que se demoran mucho en cargar, porque tienen que pasar precisamente por ese proceso de compilación, luego se ejecutan muy rápido porque compilan esa linea, por eso cada vez que vuelven a pasar por ese loop, ya esta perfectamente compilado.
+
+__Javascript solía ser interpretado__ y **ahora es compilado** con una tecnologia llamada **Just in time compiler** ó [compilación en tiempo de ejecución](https://es.wikipedia.org/wiki/Compilaci%C3%B3n_en_tiempo_de_ejecuci%C3%B3n), está tecnología lo que tiene es un monitor que se encarga de revizar cada cuanto se ejecuta nuestro código, si el código se ejecuta mucho pone un estado warm y lo que hace es que ese código lo compila, si ese código compilado se **ejecuta muchas veces**, lo coloca en un estado **HOT** y es básicamente es hacerle una **optimización** a ese compilado, para que cuando se llame, ya llame a la versión optimizada.
+
+Nodejs fue tomar el engine de JS chrome V8 para crear un entorno de ejecución y poder usar javascript del lado del servidor, recordemos que tenemos otros engine de JS como: [spiderMonkey](https://es.wikipedia.org/wiki/SpiderMonkey), [JavascriptCore](https://es.wikipedia.org/wiki/JavaScriptCore) y [Chakra](https://es.wikipedia.org/wiki/Chakra_(int%C3%A9rprete_de_JScript)). Pero como recientemente van a renovar la versión de Each van a empezar a implementar el motor V8 como Js engine.
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
+## Fechas importantes de NodeJS
+
+- En **2009** por primera vez [Ryan Dahl](https://en.wikipedia.org/wiki/Ryan_Dahl) mostró al mundo nodejs.
+
+- En **2011** por primera vez Linkenlin usa  nodejs en producción.
+
+- En **2013** se saca Gust que es una Plataforma de plugin.
+
+- A la vez Paypal saca un framework de nodejs llamado [Krakenjs](https://github.com/krakenjs/kraken-js).
+
+- En **2015** sale la competencia de nodejs llamada IOJS, pero afortunadamente se reconcilian y crean lo que hoy es [La Nodejs foundation](https://foundation.nodejs.org/).
+
+- En **2017** Nodejs Se vuelve Messing con un 8.8 millones de instancias funcionando.
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
+## Diferencias entre NodeJs y Javascript
+
+En Javascript tenemos el [DOM document object model]() es la interfaz que nos permite interpretar el documento html en javascript como lo es el objeto window, también tenemos el [CSSDOM]() que es la interfaz que nos permite **manipular el css** en javascript, por otro lado tenemos el [FetchAPI](https://developer.mozilla.org/es/docs/Web/API/Fetch_API) que por el cual podemos hacer **request** y que nos devuelva una promesa, también tenemos toda la capa de [webstorage](https://www.w3schools.com/html/html5_webstorage.asp) que consiste en el [sessionStorage](https://developer.mozilla.org/es/docs/Web/API/Window/sessionStorage) y el [localStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage) que eso no existe en nodejs, tenemos el modulo de [canvas API](https://developer.mozilla.org/es/docs/Web/HTML/Canvas) que nos permite hacer gráficos en la web en 2D y 3D y apartir de ahi tenemos una seríe de APIS como lo son: el [Web Bluetooth AP](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API), [AudioAPI](https://developer.mozilla.org/es/docs/Web_Audio_API) y [webAutenthicationAPI](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API).
+
+Por otro lado **en Nodejs** tenemos una serie de modulos:
+- **Http**: permite crear servidores 
+- **Sistema operativo**: nos permite comunicarnos entre el sistema operativo y darnos información sobre el.
+- **Utilidades**: que son una serie de utilidades excusivas para nodejs
+- **Debugger**: una manera en la que podemos hacer debuggin con nodejs.
+- **Streams**: nos permiten manejar grandes colecciones de datos-
+- **Eventos**: podemos definir acciones y dispararlas más adelantel. 
+- **Ecmascript Modules**: se pueden ejecutar en nodejs mediante un feature *flag*
+- **Consola**: es muy similar a la del navegador.
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
+## Instalación de Node.js linux y windows
+```
+$ sudo apt-get install curl
+```
+### Para la version LTS
+
+```
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+```
+
+### Para la version Current
+
+```
+$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+```
+
+### Instalacion NodeJs
+
+```
+$ sudo apt-get install nodejs
+```
+
+### Comprobacion de la instalacion
+
+```Node
+$ node -v
+```
+Output:
+```
+v12.18.0
+```
+```NPM
+$ npm -v
+```
+Output:
+```
+v6.14.4
+```
+La version del output puede variar dependiendo de la version que instalaste en pasos anteriores
+
+### Windows
+
+Para instalar Node.js tienes que dirigirte a [nodejs.org](https://nodejs.org/es/) y elegir entre la ultima versión o la version LTS.
+
+Por defecto Node.js detecta tu sistema operativo y descarga el archivo indicado para la instalación, si no es tu caso puedes dirigirte al enlace de otras [descargas](https://nodejs.org/es/download/.)
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
+#  Conocer y comprender cómo se realizan las conexiones hacia los servidores a través de internet y sus implicaciones en el desarrollo de servidores.
+
 ## ¿Qué son y cómo se usan las peticiones HTTP?
 
 Una petición HTTP es un protocolo de comunicación que permite las transferencias de información en la web.
@@ -114,123 +220,19 @@ REQUEST: Es la peticion al servidor <br/>
 Ej. POST: usuario sin id, GET a platzi.com <br/>
 RESPONSE: Cualquier metodo que recibimos del servidor, ejm: content-type: application/json, viene este archivo con el id traido del servidor., trae un html de index.html de platzi <br/>
 
-## QUERY:
+### QUERY:
 Informacion extra. Orden en el que quiero que vuelvan los parametros. Por ejemplo cuando le pasamos un id
 api.com/person?orderBy=name&age=25
 Para compartir datos con el frontend, nunca debe enviarse info sensible como tokens o tarjetas de creditos visibles en los parametros del query para la url
 Ej. miweb.com?color=red
 
-## ESTRUCTURA:
+### ESTRUCTURA:
 Añadir “?” al final de la URL <br/>
 nombre=valor, ejemplo id=3 <br/>
 Separarlos con & si es más de 1 parámetro <br/>
 Content-Length nos dirá que tan largo es el contenido. Los datos en crudo, pueden venir en dos formatos, JSON, o XML. JSON, tiene un formato muy parecido a los objetos en JavaScript, No debemos enviar información sensible en los parámetros del query <br/>
 Estructura de una querey, luego de la url va ? nombre=valor, cada queryy se separa por &. <br/>
 Las queries van a permitirte añadir información extra a los datos que queramos enviarle al servidor. <br/>
-
-## ¿Qué es Node.js y para que sirve?
-
-La definición formal de **nodejs es:** _un entorno de ejecución para javascript construido con el motor v8._
-
-**El entorno de ejecucíon:** es la capa que corre por el sistema operativo que ejecuta software, básicamente se encarga de como se consume memoria, como acceder a las variables y como corre el [garbage collector](https://es.wikipedia.org/wiki/Recolector_de_basura).
-
-[Chrome V8](https://es.wikipedia.org/wiki/Chrome_V8) Es un engine de Javascript por de **chromiund-project** para chrome y chromium. Además de chrome existen **2 proyectos** que son **chromium** que es la versión open source y luego **chrome canary**, chrome canary se llamá así por una analogía donde antiguamente los mineros iban a la mina y para detectar si habia gases o algún peligro, ponían a un canario en una pequeña jaula, si había un gas y pasaba algo, el canario lasimosamente moría y es la manera en como se daban cuenta si había algún error, lo mismo pasa con chrome canary, es la manera como detectan errores y si todo sale bien, lo pasan a chrome.
-
-[Chrome V8](https://es.wikipedia.org/wiki/Chrome_V8) lo que hace es compilar javascript a código máquina. Recordemos que los lenguajes interpretados se ejecutan muy rápido, pero cuando hay un loop de código muy seguido se demoran, porque cada vez que pasan por esa linea de código tienen que volverla a interpretar a diferencia de los lenguajes compilados que se demoran mucho en cargar, porque tienen que pasar precisamente por ese proceso de compilación, luego se ejecutan muy rápido porque compilan esa linea, por eso cada vez que vuelven a pasar por ese loop, ya esta perfectamente compilado.
-
-__Javascript solía ser interpretado__ y **ahora es compilado** con una tecnologia llamada **Just in time compiler** ó [compilación en tiempo de ejecución](https://es.wikipedia.org/wiki/Compilaci%C3%B3n_en_tiempo_de_ejecuci%C3%B3n), está tecnología lo que tiene es un monitor que se encarga de revizar cada cuanto se ejecuta nuestro código, si el código se ejecuta mucho pone un estado warm y lo que hace es que ese código lo compila, si ese código compilado se **ejecuta muchas veces**, lo coloca en un estado **HOT** y es básicamente es hacerle una **optimización** a ese compilado, para que cuando se llame, ya llame a la versión optimizada.
-
-Nodejs fue tomar el engine de JS chrome V8 para crear un entorno de ejecución y poder usar javascript del lado del servidor, recordemos que tenemos otros engine de JS como: [spiderMonkey](https://es.wikipedia.org/wiki/SpiderMonkey), [JavascriptCore](https://es.wikipedia.org/wiki/JavaScriptCore) y [Chakra](https://es.wikipedia.org/wiki/Chakra_(int%C3%A9rprete_de_JScript)). Pero como recientemente van a renovar la versión de Each van a empezar a implementar el motor V8 como Js engine.
-
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
-
-## Fechas importantes de NodeJS
-
-- En **2009** por primera vez [Ryan Dahl](https://en.wikipedia.org/wiki/Ryan_Dahl) mostró al mundo nodejs.
-
-- En **2011** por primera vez Linkenlin usa  nodejs en producción.
-
-- En **2013** se saca Gust que es una Plataforma de plugin.
-
-- A la vez Paypal saca un framework de nodejs llamado [Krakenjs](https://github.com/krakenjs/kraken-js).
-
-- En **2015** sale la competencia de nodejs llamada IOJS, pero afortunadamente se reconcilian y crean lo que hoy es [La Nodejs foundation](https://foundation.nodejs.org/).
-
-- En **2017** Nodejs Se vuelve Messing con un 8.8 millones de instancias funcionando.
-
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
-
-## Diferencias entre NodeJs y Javascript
-
-En Javascript tenemos el [DOM document object model]() es la interfaz que nos permite interpretar el documento html en javascript como lo es el objeto window, también tenemos el [CSSDOM]() que es la interfaz que nos permite **manipular el css** en javascript, por otro lado tenemos el [FetchAPI](https://developer.mozilla.org/es/docs/Web/API/Fetch_API) que por el cual podemos hacer **request** y que nos devuelva una promesa, también tenemos toda la capa de [webstorage](https://www.w3schools.com/html/html5_webstorage.asp) que consiste en el [sessionStorage](https://developer.mozilla.org/es/docs/Web/API/Window/sessionStorage) y el [localStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage) que eso no existe en nodejs, tenemos el modulo de [canvas API](https://developer.mozilla.org/es/docs/Web/HTML/Canvas) que nos permite hacer gráficos en la web en 2D y 3D y apartir de ahi tenemos una seríe de APIS como lo son: el [Web Bluetooth AP](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API), [AudioAPI](https://developer.mozilla.org/es/docs/Web_Audio_API) y [webAutenthicationAPI](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API).
-
-Por otro lado **en Nodejs** tenemos una serie de modulos:
-- **Http**: permite crear servidores 
-- **Sistema operativo**: nos permite comunicarnos entre el sistema operativo y darnos información sobre el.
-- **Utilidades**: que son una serie de utilidades excusivas para nodejs
-- **Debugger**: una manera en la que podemos hacer debuggin con nodejs.
-- **Streams**: nos permiten manejar grandes colecciones de datos-
-- **Eventos**: podemos definir acciones y dispararlas más adelantel. 
-- **Ecmascript Modules**: se pueden ejecutar en nodejs mediante un feature *flag*
-- **Consola**: es muy similar a la del navegador.
-
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
-
-## Instalación de Node.js linux y windows
-```
-$ sudo apt-get install curl
-```
-### Para la version LTS
-
-```
-$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-```
-
-### Para la version Current
-
-```
-$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-```
-
-### Instalacion NodeJs
-
-```
-$ sudo apt-get install nodejs
-```
-
-### Comprobacion de la instalacion
-
-```Node
-$ node -v
-```
-Output:
-```
-v12.18.0
-```
-```NPM
-$ npm -v
-```
-Output:
-```
-v6.14.4
-```
-La version del output puede variar dependiendo de la version que instalaste en pasos anteriores
-
-### Windows
-
-Para instalar Node.js tienes que dirigirte a [nodejs.org](https://nodejs.org/es/) y elegir entre la ultima versión o la version LTS.
-
-Por defecto Node.js detecta tu sistema operativo y descarga el archivo indicado para la instalación, si no es tu caso puedes dirigirte al enlace de otras [descargas](https://nodejs.org/es/download/.)
-
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
 
 ## Arquitectura orientada a eventos
 
