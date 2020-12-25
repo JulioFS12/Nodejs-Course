@@ -1317,6 +1317,8 @@ app.listen(2000, function () {
 
 ## Anatomía de una API Restful
 
+<img src="https://static.platzi.com/media/user_upload/diagrama-825e902b-0966-40f0-8231-65b99f7206c1.jpg"/>
+
 **Rest**: que significa _**representational state transfer (rest)**_ es un estilo de arquitectura _para construir web services_, no es un standart pero si existe una especificación creada por [Roy Fielding](https://es.wikipedia.org/wiki/Roy_Fielding) el es el confundador de apache server y director de Apache Software fundation también actualmente trabaja como director de adobe.
 
 **Las peticiones HTTP van acompañadas de un “verbo” que define el tipo de petición:**
